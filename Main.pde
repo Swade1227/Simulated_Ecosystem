@@ -8,7 +8,6 @@ void setup() {
   rabbit = new Rabbit();
   snake = new Snake();
   carrot = new Carrot();
-  
 }
 
 

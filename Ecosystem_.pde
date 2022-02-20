@@ -7,7 +7,7 @@ class Mover {
     location = new PVector(width/2,height/2);
     velocity = new PVector(0,0);
     acceleration = new PVector(-0.001, 0.01);
-    velocity.limit(10);
+    velocity.limit(0.5);
   }
  
  void update() {
@@ -19,6 +19,10 @@ class Mover {
     stroke(0);
     fill(175);
     ellipse(location.x,location.y,16,16);
+  }
+  
+  void applyForce(PVector force) {
+    acceleration.add(force);
   }
   
   void checkEdges() {
